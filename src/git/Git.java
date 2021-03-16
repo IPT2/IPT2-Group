@@ -6,46 +6,43 @@
 package git;
 
 import java.util.Scanner;
-
+import java.util.Calendar;
+import java.util.Date;
 /**
  *
  * @author Athlon
  */
 public class Git {
     Scanner sc= new Scanner (System.in);
-
     
+    //Welcomes User
    public static void sayWelcome (){
        System.out.println("Welcome, User");
    }
+   //Date of visit
+    public void Date(){
+           Calendar obj = Calendar.getInstance();
+      Date date = obj.getTime();
+      System.out.println("Current Date and time of your visit today is: "+date);
+       }
+   //Greets by name
    public void sayName(){
-       System.out.println("Enter your name: ");
+       System.out.println("Please enter your name: ");
        String name = sc.next();
        System.out.println("Hello, "+ name);
    }
-       public void sayEaten(){
-           int eaten;
-           System.out.println("Have you eaten yet?");
-           System.out.println("1.yes\n2.No");
-           eaten =sc.nextInt();
-           if (eaten==1);
-           System.out.println("That's cool");
-           if (eaten==2);
-           System.out.println("Please eat your meal");
-       }
-          public void sayMood (){
+      //Take out or Dine in choice
+            public void Dine (){
        int choice = 0;
-       System.out.println("How are you feeling today? ");
-       System.out.println("1.sad\n2.happy\n3.angry");
+       System.out.println("Would you like to take out or dine in?");
+       System.out.println("Press 1 for TAKE OUT. Press 2 for DINE IN");
        choice = sc.nextInt();
        switch (choice){
            case 1:
-               System.out.println("Hope you feel better soon");
+               System.out.println("You've chosen to take out");
                break;
            case 2:
-               System.out.println("That's great, hope you spread more happiness with your friends!");break;
-           case 3:
-               System.out.println("Don't let anger take over you!");break;
+               System.out.println("You've chosen to dine in");break;
            
        }
           }
