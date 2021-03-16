@@ -16,12 +16,11 @@ public class Main {
         Scanner sc = new Scanner (System.in);
         
         Git intro = new Git ();
-        int name;
         intro.sayWelcome();
-        
         intro.sayName();
-        intro.sayEaten();
-        intro.sayMood();
+        intro.Date();
+        intro.Dine();
+        
 
     }
 }
